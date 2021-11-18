@@ -36,11 +36,19 @@ const addRecipe = (db, body) => {
 
 const updateRecipe = (db, body) => {
   const name = body.name;
-  if (filterByName(name,db).length === 0) {
-    return {error: "Recipe does not exist"}
+
+  let recipeFound = false;
+  for (const [index,recipe] of db.recipes.entries()) {
+    if (recipe.name === name) {
+      db.recipes[index] = {...body};
+      recipeFound = true;
+    };
   };
 
-}
+  if (!recipeFound) {
+    return {error: "Recipe does not exist"};
+  };
+};
 
 
 module.exports = { getRecipeNames, recipeDetails, addRecipe, updateRecipe }
