@@ -25,14 +25,22 @@ const recipeDetails = (name, db) => {
   };
 };
 
-const addRecipe = (name, db, body) => {
+const addRecipe = (db, body) => {
+  const name = body.name;
   if (filterByName(name,db).length > 0) {
     return {error: "Recipe already exists"}
   };
   db.recipes.push(body);
   console.log(body);
-
 };
 
+const updateRecipe = (db, body) => {
+  const name = body.name;
+  if (filterByName(name,db).length === 0) {
+    return {error: "Recipe does not exist"}
+  };
 
-module.exports = { getRecipeNames, recipeDetails, addRecipe }
+}
+
+
+module.exports = { getRecipeNames, recipeDetails, addRecipe, updateRecipe }
