@@ -19,7 +19,9 @@
   "homepage": "https://github.com/diegojcastro/hatchways-backend-practice#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "express": "^4.17.1"
+    "chai": "^4.3.4",
+    "express": "^4.17.1",
+    "mocha": "^9.1.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
