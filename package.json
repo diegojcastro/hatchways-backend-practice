@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/diegojcastro/hatchways-backend-practice/issues"
   },
-  "homepage": "https://github.com/diegojcastro/hatchways-backend-practice#readme"
+  "homepage": "https://github.com/diegojcastro/hatchways-backend-practice#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
