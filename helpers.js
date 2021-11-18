@@ -6,4 +6,19 @@ const getRecipeNames = (db) => {
   return { recipeNames };
 }
 
-module.exports = { getRecipeNames }
+const recipeDetails = (name, db) => {
+  const fullRecipe = db.recipes.filter( recipe => recipe.name === name);
+  if (fullRecipe.length === 0) {
+    return {};
+  }
+  const ingredients = [...fullRecipe[0].ingredients];
+  const numSteps = fullRecipe[0].instructions.length;
+  return {
+    details: {
+      ingredients,
+      numSteps
+    }
+  };
+}
+
+module.exports = { getRecipeNames, recipeDetails }
