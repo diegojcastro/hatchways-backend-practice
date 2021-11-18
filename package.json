@@ -1,0 +1,19 @@
+{
+  "name": "hatchways-backend-practice",
+  "version": "1.0.0",
+  "description": "Practice making a REST API with Node.js Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegojcastro/hatchways-backend-practice.git"
+  },
+  "author": "Diego Castro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegojcastro/hatchways-backend-practice/issues"
+  },
+  "homepage": "https://github.com/diegojcastro/hatchways-backend-practice#readme"
+}
