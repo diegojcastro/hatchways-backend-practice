@@ -7,16 +7,20 @@ const { getRecipeNames, recipeDetails } = require('./helpers.js');
 
 app.get('/', (req, res) => {
   res.send("All systems go 👍🏽");
-})
+});
 
 app.get('/recipes/details/:recipeName', (req, res) => {
   const name = req.params.recipeName;
   res.json(recipeDetails(name, allData));
-})
+});
 
 app.get('/recipes', (req, res) => {
   res.json(getRecipeNames(allData));
-})
+});
+
+app.post('/recipes', (req, res) => {
+
+});
 
 app.listen(PORT, () => {
   console.log(`Practice app listening on port ${PORT}!`);
